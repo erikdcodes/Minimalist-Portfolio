@@ -24,7 +24,7 @@ const DefaultLayout = ({ children }) => {
           <a href="#">Portfolio</a>
           <a href="#">Contact Me</a>
         </div>
-        <div className="socials"></div>
+        <div className="socials">G T L</div>
       </footer>
     </Wrapper>
   );
@@ -48,5 +48,22 @@ const Wrapper = styled.div`
 
   footer {
     background: ${colors.greyDarkBlue};
+    min-height: 350px;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+    gap: 32px;
+  }
+
+  .links a {
+    color: ${colors.veryLightGrey};
   }
 `;
