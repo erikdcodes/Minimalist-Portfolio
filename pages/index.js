@@ -22,7 +22,7 @@ const Home = () => (
         buttonLink="#"
         buttonLabel="Go to portfolio"
       />
-      <section class="call-to-action">
+      <section className="call-to-action">
         <h2>Interested in doing a project together?</h2>
         <a className="button secondary" href="#">
           Contact Me

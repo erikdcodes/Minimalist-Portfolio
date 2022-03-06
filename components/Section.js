@@ -12,14 +12,18 @@ const Section = ({
 }) => {
   return (
     <Wrapper>
-      <img src={imgSrc} alt={imgAlt} />
-      <hr />
-      <h2>{title}</h2>
-      <p>{text}</p>
-      <a className="button secondary" href={buttonLink}>
-        {buttonLabel}
-      </a>
-      <hr />
+      <div className="img-container">
+        <img src={imgSrc} alt={imgAlt} />
+      </div>
+      <div className="text-container">
+        <hr />
+        <h2>{title}</h2>
+        <p>{text}</p>
+        <a className="button secondary" href={buttonLink}>
+          {buttonLabel}
+        </a>
+        <hr />
+      </div>
     </Wrapper>
   );
 };
@@ -27,7 +31,11 @@ const Section = ({
 export default Section;
 
 const Wrapper = styled.section`
-  & > * {
+  .img-container {
+    margin-bottom: 32px;
+  }
+
+  .text-container > * {
     margin-bottom: 32px;
   }
 
