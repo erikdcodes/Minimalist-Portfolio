@@ -42,6 +42,8 @@ button {
   outline: 1px solid var(--light-grey);
   position: relative;
   transition: all 150ms ease-in-out;
+  transform: translateX(32px); /* compensate for ::before icon width */
+  position: relative;
 }
 
 button:hover {
@@ -49,7 +51,7 @@ button:hover {
   background-color: var(--cyan);
 }
 
-/* button::before {
+button::before {
   content: url("/icons/down-arrows.svg");
   position: absolute;
   top: 0;
@@ -62,7 +64,7 @@ button:hover {
   align-items: center;
   background: var(--dark-blue);
   filter: brightness(85%);
-} */
+}
 
 a {
   color: var(--cyan);
