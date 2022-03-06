@@ -31,6 +31,24 @@ const Section = ({
 export default Section;
 
 const Wrapper = styled.section`
+  @media (min-width: 760px) {
+    display: flex;
+    gap: 96px;
+
+    .img-container {
+      flex: 1 1 50%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .text-container {
+      flex: 1 0 50%;
+    }
+  }
+
   .img-container {
     margin-bottom: 32px;
   }
