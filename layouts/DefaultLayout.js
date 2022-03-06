@@ -107,6 +107,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-inline: 32px;
   }
   .links {
     display: flex;
@@ -124,6 +125,19 @@ const Wrapper = styled.div`
   @media (min-width: 768px) {
     .hamburger-container {
       display: none;
+    }
+    footer {
+      flex-direction: row;
+      justify-content: space-between;
+      min-height: 0;
+      padding-block: 32px;
+    }
+    .logo {
+      flex: 0 1 15%;
+    }
+    .links {
+      flex-direction: row;
+      flex: 1 1 75%;
     }
   }
   @media (max-width: 767px) {
