@@ -1,16 +1,29 @@
+import { useState } from "react";
 import styled from "styled-components";
+import MobileMenu from "../components/MobileMenu";
 import { colors } from "../styles/styleVariables";
 
 const DefaultLayout = ({ children }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleClickMenu = () => {
+    setIsMenuOpen((currentState) => !currentState);
+  };
+
   return (
     <Wrapper>
+      <MobileMenu isMenuOpen={isMenuOpen} />
       <div className="container">
         <header>
           <div className="logo-container">
             <img src="images/logo.svg" alt="" />
           </div>
-          <div className="hamburger-container">
-            <img src="icons/hamburger.svg" alt="" />
+          <div onClick={handleClickMenu} className="hamburger-container">
+            {isMenuOpen ? (
+              <img src="icons/close.svg" alt="" />
+            ) : (
+              <img src="icons/hamburger.svg" alt="" />
+            )}
           </div>
         </header>
         <main>{children}</main>
@@ -36,6 +49,8 @@ const DefaultLayout = ({ children }) => {
 export default DefaultLayout;
 
 const Wrapper = styled.div`
+  position: relative;
+
   .container {
     margin-inline: auto;
     width: 100%;
@@ -47,6 +62,10 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .hamburger-container {
+    cursor: pointer;
   }
 
   footer {
