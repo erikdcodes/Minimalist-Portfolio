@@ -51,8 +51,12 @@ const DefaultLayout = ({ children }) => {
           <a href="#">Contact Me</a>
         </div>
         <div className="socials">
-          <a href="https://github.com/erikdcodes">G</a>
-          <a href="https://github.com/erikdcodes">L</a>
+          <a href="https://github.com/erikdcodes">
+            <img src="/icons/github.png" alt="" />
+          </a>
+          <a href="https://github.com/erikdcodes">
+            <img src="/icons/linkedin.png" alt="" />
+          </a>
         </div>
       </footer>
     </Wrapper>
@@ -115,6 +119,11 @@ const Wrapper = styled.div`
     text-align: center;
     text-transform: uppercase;
     gap: 32px;
+  }
+
+  .socials {
+    display: flex;
+    gap: 16px;
   }
 
   .links a,
