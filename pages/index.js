@@ -11,6 +11,7 @@ const Home = () => (
         <div className="title-container">
           <h2>Hi, I'm Erik De Jesus and I love building beautiful wesites</h2>
         </div>
+        <button>About Me</button>
       </div>
     </Wrapper>
   </DefaultLayout>
