@@ -6,8 +6,11 @@
       "background": "Veniam fugiat ex officia id qui reprehenderit ullamco ea nulla cillum qui magna laborum. Cupidatat exercitation veniam laborum tempor. Veniam magna nisi ut commodo. Proident aute laboris amet adipisicing. Excepteur et reprehenderit consequat ad ad quis aliquip do. Eu aliquip enim ipsum in consequat incididunt.",
       "tags": ["Interaction Design", "Frontend Design"],
       "technologies": ["HTML", "CSS", "Javascript", "React"],
-      "images": ["/project/image1.jpg", "project/image2.jpg"],
-      "heroImage": "/project/hero.jpg",
+      "images": [
+        "/project/image-manage-preview-1@2x.jpg",
+        "pproject/image-manage-preview-2@2x.jpg"
+      ],
+      "heroImage": "/project/image-manage-hero@2x.jpg",
       "url": "https://www.url.com"
     },
     {
@@ -16,8 +19,11 @@
       "background": "Veniam fugiat ex officia id qui reprehenderit ullamco ea nulla cillum qui magna laborum. Cupidatat exercitation veniam laborum tempor. Veniam magna nisi ut commodo. Proident aute laboris amet adipisicing. Excepteur et reprehenderit consequat ad ad quis aliquip do. Eu aliquip enim ipsum in consequat incididunt.",
       "tags": ["Interaction Design", "Frontend Design"],
       "technologies": ["HTML", "CSS", "Javascript", "React"],
-      "images": ["/project/image1.jpg", "project/image2.jpg"],
-      "heroImage": "/project/hero.jpg",
+      "images": [
+        "/project/image-bookmark-preview-1@2x.jpg",
+        "pproject/image-bookmark-preview-2@2x.jpg"
+      ],
+      "heroImage": "/project/image-bookmark-hero@2x.jpg",
       "url": "https://www.url.com"
     },
     {
@@ -26,8 +32,11 @@
       "background": "Veniam fugiat ex officia id qui reprehenderit ullamco ea nulla cillum qui magna laborum. Cupidatat exercitation veniam laborum tempor. Veniam magna nisi ut commodo. Proident aute laboris amet adipisicing. Excepteur et reprehenderit consequat ad ad quis aliquip do. Eu aliquip enim ipsum in consequat incididunt.",
       "tags": ["Interaction Design", "Frontend Design"],
       "technologies": ["HTML", "CSS", "Javascript", "React"],
-      "images": ["/project/image1.jpg", "project/image2.jpg"],
-      "heroImage": "/project/hero.jpg",
+      "images": [
+        "/project/image-insure-preview-1@2x.jpg",
+        "pproject/image-insure-preview-2@2x.jpg"
+      ],
+      "heroImage": "/project/image-insure-hero@2x.jpg",
       "url": "https://www.url.com"
     },
     {
@@ -36,8 +45,11 @@
       "background": "Veniam fugiat ex officia id qui reprehenderit ullamco ea nulla cillum qui magna laborum. Cupidatat exercitation veniam laborum tempor. Veniam magna nisi ut commodo. Proident aute laboris amet adipisicing. Excepteur et reprehenderit consequat ad ad quis aliquip do. Eu aliquip enim ipsum in consequat incididunt.",
       "tags": ["Interaction Design", "Frontend Design"],
       "technologies": ["HTML", "CSS", "Javascript", "React"],
-      "images": ["/project/image1.jpg", "project/image2.jpg"],
-      "heroImage": "/project/hero.jpg",
+      "images": [
+        "/project/image-fylo-preview-1@2x.jpg",
+        "pproject/image-fylo-preview-2@2x.jpg"
+      ],
+      "heroImage": "/project/image-fylo-hero@2x.jpg",
       "url": "https://www.url.com"
     }
   ]
