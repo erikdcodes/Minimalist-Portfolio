@@ -11,9 +11,9 @@ const Section = ({
   isReversedLayout = false,
 }) => {
   return (
-    <Wrapper>
+    <Wrapper isReversedLayout={isReversedLayout}>
       <div className="img-container">
-        <img src={imgSrc} alt={imgAlt} />
+        <img src={imgSrc} alt={imgAlt} loading="lazy" />
       </div>
       <div className="text-container">
         <hr />
@@ -33,6 +33,8 @@ export default Section;
 const Wrapper = styled.section`
   @media (min-width: 760px) {
     display: flex;
+    flex-direction: ${(props) =>
+      props.isReversedLayout ? "row-reverse" : "row"};
     gap: 96px;
 
     .img-container {
