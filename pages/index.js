@@ -8,11 +8,7 @@ const Home = () => (
   <DefaultLayout>
     <Wrapper>
       <section className="hero-container">
-        <img
-          src="images/image-homepage-hero.jpg"
-          loading="lazy"
-          alt="image of computer"
-        />
+        <img src="/images/image-homepage-hero@2x.jpg" alt="image of computer" />
         <div className="title-container">
           <h2>Hi, I'm Erik De Jesus and I love building beautiful wesites</h2>
         </div>
@@ -44,6 +40,7 @@ const Wrapper = styled.section`
     & > *:not(:last-child) {
       margin-bottom: 32px;
     }
+
     margin-bottom: 96px;
   }
   .hero-container img {

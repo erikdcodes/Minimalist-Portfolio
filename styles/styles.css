@@ -44,6 +44,7 @@ button {
   transition: all 150ms ease-in-out;
   transform: translateX(32px); /* compensate for ::before icon width */
   position: relative;
+  font-size: 14px;
 }
 
 button:hover {
