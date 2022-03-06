@@ -1,17 +1,32 @@
 //imports
 import DefaultLayout from "../layouts/DefaultLayout";
+import styled from "styled-components";
 
 // component
 const Home = () => (
   <DefaultLayout>
-    <h1>Home page</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eos
-      necessitatibus modi atque molestiae ex minima culpa reiciendis nulla
-      dolores, quod neque aut in, libero velit sapiente doloremque ad
-      reprehenderit!
-    </p>
+    <Wrapper>
+      <div className="hero-container">
+        <img src="images/image-homepage-hero.jpg" alt="" />
+        <div className="title-container">
+          <h2>Hi, I'm Erik De Jesus and I love building beautiful wesites</h2>
+        </div>
+      </div>
+    </Wrapper>
   </DefaultLayout>
 );
 
 export default Home;
+
+const Wrapper = styled.div`
+  .hero-container {
+    & > *:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+  .hero-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+`;
