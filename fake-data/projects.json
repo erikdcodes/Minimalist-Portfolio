@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "title": "Manage",
+      "description": "Amet et elit sint exercitation incididunt cillum cupidatat laboris ad adipisicing voluptate. Quis velit fugiat mollit quis aliquip fugiat ex occaecat veniam voluptate esse culpa. Aute consectetur ipsum eiusmod minim anim officia laboris incididunt.",
+      "background": "Veniam fugiat ex officia id qui reprehenderit ullamco ea nulla cillum qui magna laborum. Cupidatat exercitation veniam laborum tempor. Veniam magna nisi ut commodo. Proident aute laboris amet adipisicing. Excepteur et reprehenderit consequat ad ad quis aliquip do. Eu aliquip enim ipsum in consequat incididunt.",
+      "tags": ["Interaction Design", "Frontend Design"],
+      "technologies": ["HTML", "CSS", "Javascript", "React"],
+      "images": ["/project/image1.jpg", "project/image2.jpg"],
+      "heroImage": "/project/hero.jpg",
+      "url": "https://www.url.com"
+    },
+    {
+      "title": "Bookmark",
+      "description": "Amet et elit sint exercitation incididunt cillum cupidatat laboris ad adipisicing voluptate. Quis velit fugiat mollit quis aliquip fugiat ex occaecat veniam voluptate esse culpa. Aute consectetur ipsum eiusmod minim anim officia laboris incididunt.",
+      "background": "Veniam fugiat ex officia id qui reprehenderit ullamco ea nulla cillum qui magna laborum. Cupidatat exercitation veniam laborum tempor. Veniam magna nisi ut commodo. Proident aute laboris amet adipisicing. Excepteur et reprehenderit consequat ad ad quis aliquip do. Eu aliquip enim ipsum in consequat incididunt.",
+      "tags": ["Interaction Design", "Frontend Design"],
+      "technologies": ["HTML", "CSS", "Javascript", "React"],
+      "images": ["/project/image1.jpg", "project/image2.jpg"],
+      "heroImage": "/project/hero.jpg",
+      "url": "https://www.url.com"
+    },
+    {
+      "title": "Insure",
+      "description": "Amet et elit sint exercitation incididunt cillum cupidatat laboris ad adipisicing voluptate. Quis velit fugiat mollit quis aliquip fugiat ex occaecat veniam voluptate esse culpa. Aute consectetur ipsum eiusmod minim anim officia laboris incididunt.",
+      "background": "Veniam fugiat ex officia id qui reprehenderit ullamco ea nulla cillum qui magna laborum. Cupidatat exercitation veniam laborum tempor. Veniam magna nisi ut commodo. Proident aute laboris amet adipisicing. Excepteur et reprehenderit consequat ad ad quis aliquip do. Eu aliquip enim ipsum in consequat incididunt.",
+      "tags": ["Interaction Design", "Frontend Design"],
+      "technologies": ["HTML", "CSS", "Javascript", "React"],
+      "images": ["/project/image1.jpg", "project/image2.jpg"],
+      "heroImage": "/project/hero.jpg",
+      "url": "https://www.url.com"
+    },
+    {
+      "title": "Fylo",
+      "description": "Amet et elit sint exercitation incididunt cillum cupidatat laboris ad adipisicing voluptate. Quis velit fugiat mollit quis aliquip fugiat ex occaecat veniam voluptate esse culpa. Aute consectetur ipsum eiusmod minim anim officia laboris incididunt.",
+      "background": "Veniam fugiat ex officia id qui reprehenderit ullamco ea nulla cillum qui magna laborum. Cupidatat exercitation veniam laborum tempor. Veniam magna nisi ut commodo. Proident aute laboris amet adipisicing. Excepteur et reprehenderit consequat ad ad quis aliquip do. Eu aliquip enim ipsum in consequat incididunt.",
+      "tags": ["Interaction Design", "Frontend Design"],
+      "technologies": ["HTML", "CSS", "Javascript", "React"],
+      "images": ["/project/image1.jpg", "project/image2.jpg"],
+      "heroImage": "/project/hero.jpg",
+      "url": "https://www.url.com"
+    }
+  ]
+}
