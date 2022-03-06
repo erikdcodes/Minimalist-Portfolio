@@ -1,5 +1,4 @@
 //imports
-import Button from "../components/Button";
 import DefaultLayout from "../layouts/DefaultLayout";
 
 // component
@@ -12,7 +11,6 @@ const Home = () => (
       dolores, quod neque aut in, libero velit sapiente doloremque ad
       reprehenderit!
     </p>
-    <Button />
   </DefaultLayout>
 );
 
