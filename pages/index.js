@@ -25,10 +25,14 @@ const Home = () => (
         isReversedLayout={false}
       />
       <section className="call-to-action">
-        <h2>Interested in doing a project together?</h2>
-        <a className="button secondary" href="#">
-          Contact Me
-        </a>
+        <div>
+          <h2>Interested in doing a project together?</h2>
+        </div>
+        <div>
+          <a className="button secondary" href="#">
+            Contact Me
+          </a>
+        </div>
       </section>
     </Wrapper>
   </DefaultLayout>
@@ -69,6 +73,12 @@ const Wrapper = styled.section`
       bottom: 0;
       max-width: 500px;
       padding: 32px 32px 0 0;
+    }
+    .call-to-action {
+      display: flex;
+      text-align: left;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 `;
