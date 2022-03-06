@@ -11,7 +11,9 @@ const Home = () => (
       <section className="hero-container">
         <img src="/images/image-homepage-hero@2x.jpg" alt="image of computer" />
         <div className="title-container">
-          <h2>Hi, I'm Alex Spencer and I love building beautiful wesites</h2>
+          <h2>
+            Hi, I&apos;m Alex Spencer and I love building beautiful wesites
+          </h2>
           <button>About Me</button>
         </div>
       </section>

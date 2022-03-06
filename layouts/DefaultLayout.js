@@ -51,10 +51,10 @@ const DefaultLayout = ({ children }) => {
           <a href="#">Contact Me</a>
         </div>
         <div className="socials">
-          <a href="https://github.com/erikdcodes">
+          <a href="#">
             <img src="/icons/github.png" alt="" />
           </a>
-          <a href="https://github.com/erikdcodes">
+          <a href="#">
             <img src="/icons/linkedin.png" alt="" />
           </a>
         </div>
