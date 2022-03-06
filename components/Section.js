@@ -19,6 +19,7 @@ const Section = ({
       <a className="button secondary" href={buttonLink}>
         {buttonLabel}
       </a>
+      <hr />
     </Wrapper>
   );
 };

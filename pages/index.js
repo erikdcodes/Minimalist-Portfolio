@@ -7,13 +7,13 @@ import Section from "../components/Section";
 const Home = () => (
   <DefaultLayout>
     <Wrapper>
-      <div className="hero-container">
+      <section className="hero-container">
         <img src="images/image-homepage-hero.jpg" alt="" />
         <div className="title-container">
           <h2>Hi, I'm Erik De Jesus and I love building beautiful wesites</h2>
         </div>
         <button>About Me</button>
-      </div>
+      </section>
       <Section
         imgSrc="/images/myphoto1.jpg"
         title="About Me"
@@ -22,13 +22,19 @@ const Home = () => (
         buttonLink="#"
         buttonLabel="Go to portfolio"
       />
+      <section class="call-to-action">
+        <h2>Interested in doing a project together?</h2>
+        <a className="button secondary" href="#">
+          Contact Me
+        </a>
+      </section>
     </Wrapper>
   </DefaultLayout>
 );
 
 export default Home;
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   .hero-container {
     & > *:not(:last-child) {
       margin-bottom: 32px;
@@ -39,5 +45,12 @@ const Wrapper = styled.div`
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+  .call-to-action {
+    text-align: center;
+    padding-block: 96px;
+    & > *:not(:last-child) {
+      margin-bottom: 32px;
+    }
   }
 `;
