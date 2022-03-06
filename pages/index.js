@@ -2,6 +2,7 @@
 import DefaultLayout from "../layouts/DefaultLayout";
 import styled from "styled-components";
 import Section from "../components/Section";
+import { colors } from "../styles/styleVariables";
 
 // component
 const Home = () => (
@@ -11,8 +12,8 @@ const Home = () => (
         <img src="/images/image-homepage-hero@2x.jpg" alt="image of computer" />
         <div className="title-container">
           <h2>Hi, I'm Erik De Jesus and I love building beautiful wesites</h2>
+          <button>About Me</button>
         </div>
-        <button>About Me</button>
       </section>
       <Section
         imgSrc="/images/myphoto1.jpg"
@@ -40,8 +41,13 @@ const Wrapper = styled.section`
     & > *:not(:last-child) {
       margin-bottom: 32px;
     }
-
+    position: relative;
     margin-bottom: 96px;
+  }
+  .title-container {
+    button {
+      margin-top: 32px;
+    }
   }
   .hero-container img {
     height: 100%;
@@ -53,6 +59,16 @@ const Wrapper = styled.section`
     padding-block: 96px;
     & > *:not(:last-child) {
       margin-bottom: 32px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .title-container {
+      background: ${colors.veryLightGrey};
+      position: absolute;
+      bottom: 0;
+      max-width: 500px;
+      padding: 32px 32px 0 0;
     }
   }
 `;
