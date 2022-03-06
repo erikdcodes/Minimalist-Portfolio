@@ -40,7 +40,18 @@ const DefaultLayout = ({ children }) => {
           </div>
         </header>
         <main>{children}</main>
+        <section className="call-to-action">
+          <div>
+            <h2>Interested in doing a project together?</h2>
+          </div>
+          <div>
+            <a className="button secondary" href="#">
+              Contact Me
+            </a>
+          </div>
+        </section>
       </div>
+
       <footer>
         <div className="logo">
           <img src="/images/logo-light.svg" alt="logo" />
@@ -83,6 +94,14 @@ const Wrapper = styled.div`
 
   .hamburger-container {
     cursor: pointer;
+  }
+
+  .call-to-action {
+    text-align: center;
+    padding-block: 96px;
+    & > *:not(:last-child) {
+      margin-bottom: 32px;
+    }
   }
 
   .desktop-nav {
@@ -147,6 +166,12 @@ const Wrapper = styled.div`
     .links {
       flex-direction: row;
       flex: 1 1 75%;
+    }
+    .call-to-action {
+      display: flex;
+      text-align: left;
+      justify-content: space-between;
+      align-items: center;
     }
   }
   @media (max-width: 767px) {
