@@ -62,3 +62,41 @@ button:hover {
   background: var(--dark-blue);
   filter: brightness(85%);
 } */
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.button {
+  padding: 12px 32px;
+  text-transform: uppercase;
+  background-color: var(--dark-blue);
+  color: var(--very-light-grey);
+  border: none;
+  outline: 1px solid var(--light-grey);
+  position: relative;
+  transition: all 150ms ease-in-out;
+}
+
+a.button.secondary {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 32px;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid var(--gray-dark-blue);
+  color: var(--gray-dark-blue);
+  outline: 1px solid var(--light-grey);
+  position: relative;
+  transition: all 150ms ease-in-out;
+}
+
+a:hover.button.secondary {
+  background: var(--gray-dark-blue);
+  color: var(--light-grey);
+}

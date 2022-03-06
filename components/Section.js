@@ -1,16 +1,38 @@
 import styled from "styled-components";
+import { colors } from "../styles/styleVariables.js";
 
 const Section = ({
   imgSrc,
   title,
-  body,
+  text,
   buttonLabel,
   buttonLink,
-  orientation,
+  imgAlt,
+  isReversedLayout = false,
 }) => {
-  return <Wrapper>Section</Wrapper>;
+  return (
+    <Wrapper>
+      <img src={imgSrc} alt={imgAlt} />
+      <hr />
+      <h2>{title}</h2>
+      <p>{text}</p>
+      <a className="button secondary" href={buttonLink}>
+        {buttonLabel}
+      </a>
+    </Wrapper>
+  );
 };
 
 export default Section;
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  & > * {
+    margin-bottom: 32px;
+  }
+
+  hr {
+    height: 1px;
+    background-color: ${colors.lightGrey};
+    border: none;
+  }
+`;
