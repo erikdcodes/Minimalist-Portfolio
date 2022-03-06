@@ -24,7 +24,10 @@ const DefaultLayout = ({ children }) => {
           <a href="#">Portfolio</a>
           <a href="#">Contact Me</a>
         </div>
-        <div className="socials">G T L</div>
+        <div className="socials">
+          <a href="https://github.com/erikdcodes">G</a>
+          <a href="https://github.com/erikdcodes">L</a>
+        </div>
       </footer>
     </Wrapper>
   );
@@ -63,7 +66,8 @@ const Wrapper = styled.div`
     gap: 32px;
   }
 
-  .links a {
+  .links a,
+  .socials a {
     color: ${colors.veryLightGrey};
   }
 `;
