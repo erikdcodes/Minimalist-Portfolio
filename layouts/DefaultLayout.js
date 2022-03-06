@@ -18,6 +18,19 @@ const DefaultLayout = ({ children }) => {
           <div className="logo-container">
             <img src="images/logo.svg" alt="" />
           </div>
+          <nav className="desktop-nav">
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Portfolio</a>
+              </li>
+              <li>
+                <a href="#">Contact Me</a>
+              </li>
+            </ul>
+          </nav>
           <div onClick={handleClickMenu} className="hamburger-container">
             {isMenuOpen ? (
               <img src="icons/close.svg" alt="" />
@@ -68,6 +81,24 @@ const Wrapper = styled.div`
     cursor: pointer;
   }
 
+  .desktop-nav {
+    font-size: 14px;
+    text-transform: uppercase;
+    & a {
+      text-decoration: none;
+      color: ${colors.greyDarkBlue};
+      transition: all 150ms ease-in-out;
+    }
+    & a:hover {
+      color: ${colors.cyan};
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
+  }
+
   footer {
     background: ${colors.greyDarkBlue};
     min-height: 350px;
@@ -88,5 +119,16 @@ const Wrapper = styled.div`
   .links a,
   .socials a {
     color: ${colors.veryLightGrey};
+  }
+
+  @media (min-width: 768px) {
+    .hamburger-container {
+      display: none;
+    }
+  }
+  @media (max-width: 767px) {
+    .desktop-nav {
+      display: none;
+    }
   }
 `;
