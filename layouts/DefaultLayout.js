@@ -10,25 +10,29 @@ const DefaultLayout = ({ children }) => {
     setIsMenuOpen((currentState) => !currentState);
   };
 
+  const links = [
+    { anchorText: "Home", url: "/" },
+    { anchorText: "Portfolio", url: "/portfolio" },
+    { anchorText: "Contact Me", url: "/contact" },
+  ];
+
   return (
     <Wrapper>
-      <MobileMenu isMenuOpen={isMenuOpen} />
+      <MobileMenu isMenuOpen={isMenuOpen} links={links} />
       <div className="container">
         <header>
           <div className="logo-container">
-            <img src="images/logo.svg" alt="" />
+            <a href="/">
+              <img src="images/logo.svg" alt="" />
+            </a>
           </div>
           <nav className="desktop-nav">
             <ul>
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/portfolio">Portfolio</a>
-              </li>
-              <li>
-                <a href="#">Contact Me</a>
-              </li>
+              {links.map((link, i) => (
+                <li key={link.url + i}>
+                  <a href={link.url}> {link.anchorText} </a>
+                </li>
+              ))}
             </ul>
           </nav>
           <div onClick={handleClickMenu} className="hamburger-container">
@@ -57,9 +61,12 @@ const DefaultLayout = ({ children }) => {
           <img src="/images/logo-light.svg" alt="logo" />
         </div>
         <div className="links">
-          <a href="#">Home</a>
-          <a href="#">Portfolio</a>
-          <a href="#">Contact Me</a>
+          {links.map((link, i) => (
+            <a key={link.anchorText + 1} href={link.url}>
+              {" "}
+              {link.anchorText}{" "}
+            </a>
+          ))}
         </div>
         <div className="socials">
           <a href="#">

@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { colors } from "../styles/styleVariables";
 
-const MobileMenu = ({ isMenuOpen }) => {
+const MobileMenu = ({ isMenuOpen, links }) => {
+  console.log(links);
   if (isMenuOpen) {
     return (
       <Wrapper>
-        <a href="#">Home</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Contact Me</a>
+        {links.map((link) => (
+          <a href={link.url}>{link.anchorText}</a>
+        ))}
       </Wrapper>
     );
   } else {
