@@ -15,10 +15,9 @@ const Section = ({
       <div className="img-container">
         <img src={imgSrc} alt={imgAlt} loading="lazy" />
       </div>
+
       <div className="text-container">
-        <div>
-          <hr />
-        </div>
+        <div className="line"></div>
         <div className="text">
           <h2>{title}</h2>
           <p>{text}</p>
@@ -26,9 +25,7 @@ const Section = ({
             {buttonLabel}
           </a>
         </div>
-        <div>
-          <hr />
-        </div>
+        <div className="line"></div>
       </div>
     </Wrapper>
   );
@@ -37,49 +34,36 @@ const Section = ({
 export default Section;
 
 const Wrapper = styled.section`
-  margin-bottom: 96px;
-  height: 100%;
-  .text-container > * {
-    margin-bottom: 32px;
+  display: grid;
+  gap: 32px;
+
+  .line {
+    width: 100%;
+    border-top: 1px solid ${colors.greyDarkBlue};
   }
-  .text > * {
-    margin-bottom: 32px;
+
+  .img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .text-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .text {
+    padding-block: 32px;
+
+    & > *:not(:last-child) {
+      margin-bottom: 32px;
+    }
   }
 
   @media (min-width: 768px) {
-    height: 100%;
-    display: flex;
-    flex-direction: ${(props) =>
-      props.isReversedLayout ? "row-reverse" : "row"};
-    gap: 96px;
-
-    .img-container {
-      flex: 1 1 50%;
-      height: 100%;
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-    .text-container {
-      flex: 1 0 50%;
-      height: 100%;
-    }
-  }
-
-  .img-container {
-    margin-bottom: 32px;
-    height: 100%;
-  }
-
-  .text-container > * {
-    margin-bottom: 64px;
-  }
-
-  hr {
-    height: 1px;
-    background-color: ${colors.lightGrey};
-    border: none;
+    grid-template-columns: 1fr 1fr;
   }
 `;
