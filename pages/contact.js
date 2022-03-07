@@ -27,13 +27,21 @@ const Contact = () => {
         <div className="contact-form-container">
           <h2>Contact Me</h2>
           <form>
-            <label htmlFor="name">Name</label>
-            <input required type="text" id="name" />
-            <label htmlFor="email">Email</label>
-            <input required type="text" id="email" />
-            <label htmlFor="message">Message</label>
-            <textarea id="textarea" />
-            <button>Submit</button>
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input required type="text" id="name" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input required type="text" id="email" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea id="textarea" />
+            </div>
+            <div className="button-container">
+              <button>Submit</button>
+            </div>
           </form>
         </div>
       </Wrapper>
@@ -43,6 +51,7 @@ const Contact = () => {
 
 const Wrapper = styled.div`
   width: 100%;
+  padding-block: 32px;
   .text-container {
     display: flex;
     flex-direction: column;
@@ -62,8 +71,16 @@ const Wrapper = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 16px;
 
-    button {
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .button-container {
+      width: 100%;
+      height: 100%;
     }
   }
 `;

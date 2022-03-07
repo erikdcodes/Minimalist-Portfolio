@@ -42,7 +42,7 @@ button {
   outline: 1px solid var(--light-grey);
   position: relative;
   transition: all 150ms ease-in-out;
-  transform: translateX(32px); /* compensate for ::before icon width */
+  transform: translateX(32px); /*compensate for ::before icon width*/
   position: relative;
   font-size: 14px;
 }
@@ -59,7 +59,6 @@ button::before {
   bottom: 0;
   left: -32px;
   width: 32px;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
