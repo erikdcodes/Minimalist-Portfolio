@@ -24,7 +24,7 @@ const DefaultLayout = ({ children }) => {
         <header>
           <div className="logo-container">
             <a href="/">
-              <img src="images/logo.svg" alt="" />
+              <img src="/images/logo.svg" alt="" />
             </a>
           </div>
           <nav className="desktop-nav">
@@ -38,9 +38,9 @@ const DefaultLayout = ({ children }) => {
           </nav>
           <div onClick={handleClickMenu} className="hamburger-container">
             {isMenuOpen ? (
-              <img src="icons/close.svg" alt="" />
+              <img src="/icons/close.svg" alt="" />
             ) : (
-              <img src="icons/hamburger.svg" alt="" />
+              <img src="/icons/hamburger.svg" alt="" />
             )}
           </div>
         </header>

@@ -19,7 +19,7 @@ const Portfolio = ({ projects }) => {
               imgSrc={project.heroImage}
               imgAlt={`${project.title} + preview photo`}
               buttonLabel="View Project"
-              buttonLink={`/portfolio/${project.title}`}
+              buttonLink={`/portfolio/${project.title.toLowerCase()}`}
               isReversedLayout={i % 2 == 1}
             />
           </div>
