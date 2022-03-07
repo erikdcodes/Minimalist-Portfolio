@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import MobileMenu from "../components/MobileMenu";
+import SocialLinks from "../components/SocialLinks";
 import { colors } from "../styles/styleVariables";
 
 const DefaultLayout = ({ children }) => {
@@ -68,14 +69,8 @@ const DefaultLayout = ({ children }) => {
             </a>
           ))}
         </div>
-        <div className="socials">
-          <a href="#">
-            <img src="/icons/github.png" alt="" />
-          </a>
-          <a href="#">
-            <img src="/icons/linkedin.png" alt="" />
-          </a>
-        </div>
+
+        <SocialLinks />
       </footer>
     </Wrapper>
   );
@@ -149,13 +144,7 @@ const Wrapper = styled.div`
     gap: 32px;
   }
 
-  .socials {
-    display: flex;
-    gap: 16px;
-  }
-
-  .links a,
-  .socials a {
+  .links a {
     color: ${colors.veryLightGrey};
   }
 
