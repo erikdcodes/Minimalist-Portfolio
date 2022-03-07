@@ -6,8 +6,10 @@ const MobileMenu = ({ isMenuOpen, links }) => {
   if (isMenuOpen) {
     return (
       <Wrapper>
-        {links.map((link) => (
-          <a href={link.url}>{link.anchorText}</a>
+        {links.map((link, i) => (
+          <a key={link + i} href={link.url}>
+            {link.anchorText}
+          </a>
         ))}
       </Wrapper>
     );
