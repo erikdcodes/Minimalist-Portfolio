@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useRouter } from "next/router";
 
 // layout
 // hero image
@@ -10,7 +11,9 @@ import styled from "styled-components";
 // call to action
 
 const Project = () => {
-  return <div>Project</div>;
+  const router = useRouter();
+  const { slug } = router.query;
+  return <div>{slug}</div>;
 };
 
 export default Project;
