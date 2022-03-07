@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../styles/styleVariables.js";
+import Line from "./Line.js";
 
 const Section = ({
   imgSrc,
@@ -17,7 +18,7 @@ const Section = ({
       </div>
 
       <div className="text-container">
-        <div className="line"></div>
+        <Line />
         <div className="text">
           <h2>{title}</h2>
           <p>{text}</p>
@@ -25,7 +26,7 @@ const Section = ({
             {buttonLabel}
           </a>
         </div>
-        <div className="line"></div>
+        <Line />
       </div>
     </Wrapper>
   );
@@ -38,12 +39,6 @@ const Wrapper = styled.section`
   row-gap: 32px;
   column-gap: 0;
   margin-bottom: 96px;
-
-  .line {
-    width: 100%;
-    border-top: 1px solid ${colors.lightGrey};
-    height: 1px;
-  }
 
   .img-container img {
     height: 100%;

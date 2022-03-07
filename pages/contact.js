@@ -1,10 +1,12 @@
 import ContactLayout from "../layouts/ContactLayout.js";
 import styled from "styled-components";
+import Line from "../components/Line.js";
 
 const Contact = () => {
   return (
     <ContactLayout>
       <Wrapper>
+        <Line />
         <h1>Get In Touch</h1>
         <p>
           I’d love to hear about what you’re working on and how I could help.
@@ -16,7 +18,7 @@ const Contact = () => {
           detail. Please do feel free to check out my online profiles below and
           get in touch using the form.
         </p>
-        <hr />
+        <Line />
       </Wrapper>
     </ContactLayout>
   );
