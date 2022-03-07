@@ -35,11 +35,13 @@ export default Section;
 
 const Wrapper = styled.section`
   display: grid;
-  gap: 32px;
+  row-gap: 32px;
+  column-gap: 0;
+  margin-bottom: 96px;
 
   .line {
     width: 100%;
-    border-top: 1px solid ${colors.greyDarkBlue};
+    border-top: 1px solid ${colors.lightGrey};
   }
 
   .img-container img {
@@ -65,5 +67,10 @@ const Wrapper = styled.section`
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    row-gap: 0;
+    .text-container {
+      order: ${(props) => (props.isReversedLayout ? "-1" : 0)};
+    }
   }
 `;
