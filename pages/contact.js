@@ -24,12 +24,25 @@ const Contact = () => {
           </div>
           <Line />
         </div>
+        <div className="contact-form-container">
+          <h2>Contact Me</h2>
+          <form>
+            <label htmlFor="name">Name</label>
+            <input required type="text" id="name" />
+            <label htmlFor="email">Email</label>
+            <input required type="text" id="email" />
+            <label htmlFor="message">Message</label>
+            <textarea id="textarea" />
+            <button>Submit</button>
+          </form>
+        </div>
       </Wrapper>
     </ContactLayout>
   );
 };
 
 const Wrapper = styled.div`
+  width: 100%;
   .text-container {
     display: flex;
     flex-direction: column;
@@ -37,6 +50,20 @@ const Wrapper = styled.div`
 
     & > *:not(:last-child) {
       margin-bottom: 32px;
+    }
+  }
+
+  .contact-form-container {
+    width: 100%;
+  }
+
+  form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    button {
     }
   }
 `;

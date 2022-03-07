@@ -104,3 +104,23 @@ a:hover.button.secondary {
   background: var(--gray-dark-blue);
   color: var(--light-grey);
 }
+
+input,
+textarea {
+  font-size: 16px;
+  padding: 16px 32px;
+  border: none;
+  background: var(--light-grey);
+}
+
+input:active,
+input:focus textarea:active,
+textarea:focus {
+  outline: 1px solid var(--cyan);
+  outline-offset: 0;
+}
+
+/* input:invalid {
+  outline: 1px solid var(--bright-red);
+  outline-offset: 0;
+} */

@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { colors } from "../styles/styleVariables";
 
 const MobileMenu = ({ isMenuOpen, links }) => {
-  console.log(links);
   if (isMenuOpen) {
     return (
       <Wrapper>
