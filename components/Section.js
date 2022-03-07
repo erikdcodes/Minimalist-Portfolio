@@ -42,6 +42,7 @@ const Wrapper = styled.section`
   .line {
     width: 100%;
     border-top: 1px solid ${colors.lightGrey};
+    height: 1px;
   }
 
   .img-container img {
