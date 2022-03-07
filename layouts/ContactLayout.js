@@ -77,6 +77,7 @@ const Wrapper = styled.div`
   position: relative;
 
   .container {
+    min-height: 50vh;
     margin-inline: auto;
     width: 100%;
     padding-inline: max(32px, calc((100% - 1440px) / 2));
