@@ -29,7 +29,7 @@ const Portfolio = ({ projects }) => {
   );
 };
 
-export async function getStaticProps({}) {
+export async function getStaticProps() {
   const res = await fetch("http://localhost:3000/api/hello");
   const projects = await res.json();
 
