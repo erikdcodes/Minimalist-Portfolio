@@ -52,6 +52,7 @@ const Contact = () => {
 const Wrapper = styled.div`
   width: 100%;
   padding-block: 32px;
+
   .text-container {
     display: flex;
     flex-direction: column;
