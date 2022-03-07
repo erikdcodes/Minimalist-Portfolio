@@ -10,7 +10,7 @@
         "/images/projects/image-manage-preview-1@2x.jpg",
         "/images/projects/image-manage-preview-2@2x.jpg"
       ],
-      "heroImage": "/images/projects/image-manage-hero@2x.jpg",
+      "heroImage": "/images/projects/image-portfolio-manage@2x.jpg",
       "url": "https://www.url.com"
     },
     {
@@ -23,7 +23,7 @@
         "/images/projects/image-bookmark-preview-1@2x.jpg",
         "/images/projects/image-bookmark-preview-2@2x.jpg"
       ],
-      "heroImage": "/images/projects/image-bookmark-hero@2x.jpg",
+      "heroImage": "/images/projects/image-portfolio-bookmark@2x.jpg",
       "url": "https://www.url.com"
     },
     {
@@ -36,7 +36,7 @@
         "/images/projects/image-insure-preview-1@2x.jpg",
         "/images/projects/image-insure-preview-2@2x.jpg"
       ],
-      "heroImage": "/images/projects/image-insure-hero@2x.jpg",
+      "heroImage": "/images/projects/image-portfolio-insure@2x.jpg",
       "url": "https://www.url.com"
     },
     {
@@ -49,7 +49,7 @@
         "/images/projects/image-fylo-preview-1@2x.jpg",
         "/images/projects/image-fylo-preview-2@2x.jpg"
       ],
-      "heroImage": "/images/projects/image-fylo-hero@2x.jpg",
+      "heroImage": "/images/projects/image-portfolio-fylo@2x.jpg",
       "url": "https://www.url.com"
     }
   ]

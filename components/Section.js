@@ -31,7 +31,11 @@ const Section = ({
 export default Section;
 
 const Wrapper = styled.section`
+  margin-bottom: 96px;
+  height: 100%;
+
   @media (min-width: 760px) {
+    height: 100%;
     display: flex;
     flex-direction: ${(props) =>
       props.isReversedLayout ? "row-reverse" : "row"};
@@ -39,7 +43,7 @@ const Wrapper = styled.section`
 
     .img-container {
       flex: 1 1 50%;
-
+      height: 100%;
       img {
         height: 100%;
         width: 100%;
@@ -48,15 +52,17 @@ const Wrapper = styled.section`
     }
     .text-container {
       flex: 1 0 50%;
+      height: 100%;
     }
   }
 
   .img-container {
     margin-bottom: 32px;
+    height: 100%;
   }
 
   .text-container > * {
-    margin-bottom: 32px;
+    margin-bottom: 64px;
   }
 
   hr {
