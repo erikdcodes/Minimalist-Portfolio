@@ -50,7 +50,7 @@ const DefaultLayout = ({ children }) => {
             <h2>Interested in doing a project together?</h2>
           </div>
           <div>
-            <a className="button secondary" href="#">
+            <a className="button secondary" href="contact">
               Contact Me
             </a>
           </div>
@@ -64,8 +64,7 @@ const DefaultLayout = ({ children }) => {
         <div className="links">
           {links.map((link, i) => (
             <a key={link.anchorText + 1} href={link.url}>
-              {" "}
-              {link.anchorText}{" "}
+              {link.anchorText}
             </a>
           ))}
         </div>
