@@ -16,13 +16,19 @@ const Section = ({
         <img src={imgSrc} alt={imgAlt} loading="lazy" />
       </div>
       <div className="text-container">
-        <hr />
-        <h2>{title}</h2>
-        <p>{text}</p>
-        <a className="button secondary" href={buttonLink}>
-          {buttonLabel}
-        </a>
-        <hr />
+        <div>
+          <hr />
+        </div>
+        <div className="text">
+          <h2>{title}</h2>
+          <p>{text}</p>
+          <a className="button secondary" href={buttonLink}>
+            {buttonLabel}
+          </a>
+        </div>
+        <div>
+          <hr />
+        </div>
       </div>
     </Wrapper>
   );
@@ -33,8 +39,14 @@ export default Section;
 const Wrapper = styled.section`
   margin-bottom: 96px;
   height: 100%;
+  .text-container > * {
+    margin-bottom: 32px;
+  }
+  .text > * {
+    margin-bottom: 32px;
+  }
 
-  @media (min-width: 760px) {
+  @media (min-width: 768px) {
     height: 100%;
     display: flex;
     flex-direction: ${(props) =>
