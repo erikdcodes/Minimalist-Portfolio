@@ -5,10 +5,6 @@ import styled from "styled-components";
 import getProjects from "../../lib/getProjects.js";
 
 const Portfolio = ({ projects }) => {
-  useEffect(() => {
-    console.log(projects);
-  }, [projects]);
-
   return (
     <DefaultLayout>
       <Wrapper>

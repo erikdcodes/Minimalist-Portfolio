@@ -11,18 +11,9 @@ import getProjects from "../../lib/getProjects";
 // links
 // call to action
 
-const Project = ({ project }) => {
-  console.log(project);
-  const {
-    title,
-    description,
-    background,
-    tags,
-    technologies,
-    images,
-    heroImage2,
-    url,
-  } = project[0];
+const Project = (props) => {
+  // console.log(props);
+  const { project } = props;
 
   return (
     <DefaultLayout>
@@ -36,11 +27,12 @@ const Wrapper = styled.div``;
 export default Project;
 
 export async function getStaticProps({ params }) {
-  const data = await getProjects();
-  const project = data.projects.filter(
+  const res = await getProjects();
+  const data = res.projects.filter(
     (p) => p.title.toLowerCase() === params.slug.toLowerCase()
   );
-  console.log(data);
+
+  const project = data[0];
 
   return {
     props: { project },
@@ -54,6 +46,6 @@ export async function getStaticPaths() {
     paths: data.projects.map(
       (project) => `/portfolio/${project.title.toLowerCase()}`
     ),
-    fallback: true,
+    fallback: false,
   };
 }
