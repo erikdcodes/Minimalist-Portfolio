@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { useRouter } from "next/router";
 import DefaultLayout from "../../layouts/DefaultLayout";
+import getProjects from "../../lib/getProjects";
 
 // layout
 // hero image
@@ -11,37 +11,47 @@ import DefaultLayout from "../../layouts/DefaultLayout";
 // links
 // call to action
 
-const Project = (projects) => {
-  const router = useRouter();
-  const { slug } = router.query;
+const Project = ({ project }) => {
+  console.log(project);
+  const {
+    title,
+    description,
+    background,
+    tags,
+    technologies,
+    images,
+    heroImage2,
+    url,
+  } = project[0];
+
   return (
     <DefaultLayout>
-      <h1>{slug}</h1>
+      <h1>{project.title}</h1>
     </DefaultLayout>
   );
 };
 
+const Wrapper = styled.div``;
+
 export default Project;
 
-const getProjects = async () => {
-  const res = await fetch("http://localhost:3000/api/hello");
-  const projects = await res.json();
-  return projects;
-};
-
-export async function getStaticProps() {
-  const projects = await getProjects();
+export async function getStaticProps({ params }) {
+  const data = await getProjects();
+  const project = data.projects.filter(
+    (p) => p.title.toLowerCase() === params.slug.toLowerCase()
+  );
+  console.log(data);
 
   return {
-    props: { projects },
+    props: { project },
   };
 }
 
 export async function getStaticPaths() {
-  const projects = await getProjects();
+  const data = await getProjects();
 
   return {
-    paths: projects.projects.map(
+    paths: data.projects.map(
       (project) => `/portfolio/${project.title.toLowerCase()}`
     ),
     fallback: true,

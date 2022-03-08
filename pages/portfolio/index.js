@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import DefaultLayout from "../../layouts/DefaultLayout.js";
 import Section from "../../components/Section.js";
 import styled from "styled-components";
+import getProjects from "../../lib/getProjects.js";
 
 const Portfolio = ({ projects }) => {
   useEffect(() => {
@@ -30,8 +31,7 @@ const Portfolio = ({ projects }) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/hello");
-  const projects = await res.json();
+  const projects = await getProjects();
 
   return {
     props: { projects },
