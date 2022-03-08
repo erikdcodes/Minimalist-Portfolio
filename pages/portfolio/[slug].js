@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import getProjects from "../../lib/getProjects";
+import Line from "../../components/Line.js";
+import { colors } from "../../styles/styleVariables";
 
 // layout
 // hero image
@@ -21,6 +23,7 @@ const Project = ({ project }) => {
         </div>
         <section>
           <section className="description-container">
+            <Line />
             <h1>{project.title}</h1>
             <p>{project.description}</p>
             <div className="tags-container">
@@ -30,6 +33,10 @@ const Project = ({ project }) => {
                 } else return <span key={tag + i}>{`${tag} / `}</span>;
               })}
             </div>
+            <a className="button secondary" href="#">
+              Visit Website
+            </a>
+            <Line />
           </section>
           <section className="background-container">
             <h2>Project Background</h2>
@@ -47,10 +54,7 @@ const Project = ({ project }) => {
   );
 };
 
-const Wrapper = styled.div``;
-
-export default Project;
-
+// nextjs ssg props
 export async function getStaticProps({ params }) {
   const res = await getProjects();
   const data = res.projects.filter(
@@ -64,6 +68,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
+// nextjs ssg paths
 export async function getStaticPaths() {
   const data = await getProjects();
 
@@ -74,3 +79,23 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
+//styled components
+const Wrapper = styled.div`
+  .image-container {
+    margin-bottom: 32px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .description-container > * {
+    margin-bottom: 32px;
+  }
+  .tags-container {
+    color: ${colors.cyan};
+  }
+`;
+
+export default Project;
