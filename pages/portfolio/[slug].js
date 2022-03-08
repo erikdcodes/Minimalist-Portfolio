@@ -90,7 +90,9 @@ const Wrapper = styled.div`
       object-fit: cover;
     }
   }
-  .description-container > * {
+  .description-container > *,
+  .background-container > *,
+  .previews-container > * {
     margin-bottom: 32px;
   }
   .tags-container {
