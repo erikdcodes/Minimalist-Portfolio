@@ -3,6 +3,7 @@ import DefaultLayout from "../../layouts/DefaultLayout";
 import getProjects from "../../lib/getProjects";
 import { colors } from "../../styles/styleVariables";
 import ProjectNav from "../../components/ProjectNav";
+import Head from "next/head";
 
 const Project = ({ project, projects }) => {
   const currentIndex = projects.findIndex(
@@ -11,6 +12,14 @@ const Project = ({ project, projects }) => {
 
   return (
     <DefaultLayout>
+      <Head>
+        <title>{`${project.title} - Minimalist Portfolio - by Erik De Jesus`}</title>
+        <meta
+          property="og:title"
+          content={`${project.title} - Minimalist Portfolio - by Erik De Jesus`}
+          key={project.title}
+        />
+      </Head>
       <Wrapper>
         <div className="image-container">
           <img src={project.heroImage2} alt={`${project.title} screenshot`} />

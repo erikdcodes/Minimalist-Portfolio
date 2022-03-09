@@ -3,6 +3,7 @@ import styled from "styled-components";
 import MobileMenu from "../components/MobileMenu";
 import SocialLinks from "../components/SocialLinks";
 import { colors } from "../styles/styleVariables";
+import Head from "next/head";
 
 const DefaultLayout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,6 +20,14 @@ const DefaultLayout = ({ children }) => {
 
   return (
     <Wrapper>
+      <Head>
+        <title>Minimalist Portfolio - by Erik De Jesus</title>
+        <meta
+          property="og:title"
+          content="Minimalist Portfolio - by Erik De Jesus"
+          key="title"
+        />
+      </Head>
       <MobileMenu isMenuOpen={isMenuOpen} links={links} />
       <div className="container">
         <header>
