@@ -1,19 +1,31 @@
 import styled from "styled-components";
 import { colors } from "../styles/styleVariables";
 
-const ProjectNav = ({ projects }) => {
+const ProjectNav = ({ projects, currentIndex }) => {
+  // console.log("pojectnav index", currentIndex);
+
+  const nextLink = () => {
+    if (currentIndex === projects.length - 1) return projects[0].title; // if last, return first project
+    return projects[currentIndex + 1].title;
+  };
+
+  const previousLink = () => {
+    if (currentIndex === 0) return projects[projects.length - 1].title; //if first, return last project
+    return projects[currentIndex - 1].title;
+  };
+
   return (
     <Wrapper>
       <div className="previous-container">
-        <a href="#">
-          <h3>Fylo</h3>
-          <span>Previous Project</span>
+        <a href={`/portfolio/${previousLink()?.toLowerCase()}`}>
+          <h3>{previousLink()}</h3>
+          <span className="link-label">Previous Project</span>
         </a>
       </div>
       <div className="next-container">
-        <a href="#">
-          <h3>Bookmark</h3>
-          <span>Next Project</span>
+        <a href={`/portfolio/${nextLink()?.toLowerCase()}`}>
+          <h3>{nextLink()}</h3>
+          <span className="link-label">Next Project</span>
         </a>
       </div>
     </Wrapper>

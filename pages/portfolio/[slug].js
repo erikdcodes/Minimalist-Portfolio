@@ -3,16 +3,12 @@ import DefaultLayout from "../../layouts/DefaultLayout";
 import getProjects from "../../lib/getProjects";
 import Line from "../../components/Line.js";
 import { colors } from "../../styles/styleVariables";
-import { useEffect } from "react";
 import ProjectNav from "../../components/ProjectNav";
 
 const Project = ({ project, projects }) => {
-  console.info(projects);
-
-  const thisIndex = projects.findIndex((item) => item.title === project.title);
-  useEffect(() => {
-    console.log(thisIndex);
-  }, [thisIndex]);
+  const currentIndex = projects.findIndex(
+    (item) => item.title === project.title
+  );
 
   return (
     <DefaultLayout>
@@ -48,7 +44,7 @@ const Project = ({ project, projects }) => {
             </div>
           </section>
         </section>
-        <ProjectNav projects={projects} />
+        <ProjectNav projects={projects} currentIndex={currentIndex} />
       </Wrapper>
     </DefaultLayout>
   );
