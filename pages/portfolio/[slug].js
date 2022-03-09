@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import getProjects from "../../lib/getProjects";
-import Line from "../../components/Line.js";
 import { colors } from "../../styles/styleVariables";
 import ProjectNav from "../../components/ProjectNav";
 

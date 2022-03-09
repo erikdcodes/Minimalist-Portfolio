@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { colors } from "../styles/styleVariables.js";
-import Line from "./Line.js";
 
 const Section = ({
   imgSrc,
