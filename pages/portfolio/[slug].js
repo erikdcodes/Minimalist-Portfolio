@@ -3,9 +3,17 @@ import DefaultLayout from "../../layouts/DefaultLayout";
 import getProjects from "../../lib/getProjects";
 import Line from "../../components/Line.js";
 import { colors } from "../../styles/styleVariables";
+import { useEffect } from "react";
+import ProjectNav from "../../components/ProjectNav";
 
-const Project = ({ project }) => {
-  console.info(project);
+const Project = ({ project, projects }) => {
+  console.info(projects);
+
+  const thisIndex = projects.findIndex((item) => item.title === project.title);
+  useEffect(() => {
+    console.log(thisIndex);
+  }, [thisIndex]);
+
   return (
     <DefaultLayout>
       <Wrapper>
@@ -40,6 +48,7 @@ const Project = ({ project }) => {
             </div>
           </section>
         </section>
+        <ProjectNav projects={projects} />
       </Wrapper>
     </DefaultLayout>
   );
@@ -48,14 +57,15 @@ const Project = ({ project }) => {
 // nextjs ssg props
 export async function getStaticProps({ params }) {
   const res = await getProjects();
-  const data = res.projects.filter(
+  const projects = res.projects;
+  const data = projects.filter(
     (p) => p.title.toLowerCase() === params.slug.toLowerCase()
   );
 
   const project = data[0];
 
   return {
-    props: { project },
+    props: { project, projects },
   };
 }
 
