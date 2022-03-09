@@ -4,15 +4,6 @@ import getProjects from "../../lib/getProjects";
 import Line from "../../components/Line.js";
 import { colors } from "../../styles/styleVariables";
 
-// layout
-// hero image
-// section component
-// project background title
-// project background text
-// static previews
-// links
-// call to action
-
 const Project = ({ project }) => {
   console.info(project);
   return (
