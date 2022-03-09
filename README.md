@@ -23,7 +23,7 @@ Screenshot of live website: ![Screenshot](./minimalist-screenshot.jpg)
 
 ### Links
 
-- [Live Site URL:](https://minimalist-portfolio-erikdcodes.vercel.app/)
+- Live website URL [Minimalist Portfolio:](https://minimalist-portfolio-erikdcodes.vercel.app/)
 
 ## My process
 
