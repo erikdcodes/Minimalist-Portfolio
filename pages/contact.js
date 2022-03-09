@@ -1,13 +1,13 @@
 import ContactLayout from "../layouts/ContactLayout.js";
 import styled from "styled-components";
 import Line from "../components/Line.js";
+import { colors } from "../styles/styleVariables.js";
 
 const Contact = () => {
   return (
     <ContactLayout>
       <Wrapper>
         <div className="text-container">
-          <Line />
           <div className="text">
             <h1>Get In Touch</h1>
             <p>
@@ -22,7 +22,6 @@ const Contact = () => {
               form.
             </p>
           </div>
-          <Line />
         </div>
         <div className="contact-form-container">
           <h2>Contact Me</h2>
@@ -57,6 +56,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-block: 1px solid ${colors.lightGrey};
 
     & > *:not(:last-child) {
       margin-bottom: 32px;
