@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import DefaultLayout from "../../layouts/DefaultLayout.js";
 import Section from "../../components/Section.js";
 import styled from "styled-components";
