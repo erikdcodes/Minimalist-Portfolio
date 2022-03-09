@@ -19,9 +19,7 @@ This is a solution to the [Minimalist portfolio website challenge on Frontend Me
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-...coming soon
+Screenshot of live website: ![Screenshot](./minimalist-screenshot.jpg)
 
 ### Links
 
