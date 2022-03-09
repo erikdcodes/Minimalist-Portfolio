@@ -18,7 +18,6 @@ const Section = ({
       </div>
 
       <div className="text-container">
-        <Line />
         <div className="text">
           <h2>{title}</h2>
           <p>{text}</p>
@@ -26,7 +25,6 @@ const Section = ({
             {buttonLabel}
           </a>
         </div>
-        <Line />
       </div>
     </Wrapper>
   );
@@ -47,6 +45,7 @@ const Wrapper = styled.section`
   }
 
   .text-container {
+    border-block: 1px solid ${colors.lightGrey};
     height: 100%;
     display: flex;
     flex-direction: column;
