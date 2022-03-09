@@ -1,7 +1,7 @@
 import DefaultLayout from "../../layouts/DefaultLayout.js";
 import Section from "../../components/Section.js";
 import styled from "styled-components";
-import getProjects from "../../lib/getProjects.js";
+import projects from "../../fake-data/projects.json";
 
 const Portfolio = ({ projects }) => {
   return (
@@ -26,7 +26,7 @@ const Portfolio = ({ projects }) => {
 };
 
 export async function getStaticProps() {
-  const projects = await getProjects();
+  // normally fetch data from server or headless crm. currently importing fake data
 
   return {
     props: { projects },

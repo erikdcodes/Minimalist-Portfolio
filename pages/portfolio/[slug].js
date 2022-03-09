@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import DefaultLayout from "../../layouts/DefaultLayout";
-import getProjects from "../../lib/getProjects";
 import { colors } from "../../styles/styleVariables";
 import ProjectNav from "../../components/ProjectNav";
 import Head from "next/head";
+import data from "../../fake-data/projects.json";
+const { projects } = data;
 
 const Project = ({ project, projects }) => {
   const currentIndex = projects.findIndex(
@@ -62,13 +63,11 @@ const Project = ({ project, projects }) => {
 
 // nextjs ssg props
 export async function getStaticProps({ params }) {
-  const res = await getProjects();
-  const projects = res.projects;
-  const data = projects.filter(
+  const item = projects.filter(
     (p) => p.title.toLowerCase() === params.slug.toLowerCase()
   );
 
-  const project = data[0];
+  const project = item[0];
 
   return {
     props: { project, projects },
@@ -77,10 +76,8 @@ export async function getStaticProps({ params }) {
 
 // nextjs ssg paths
 export async function getStaticPaths() {
-  const data = await getProjects();
-
   return {
-    paths: data.projects.map(
+    paths: projects.map(
       (project) => `/portfolio/${project.title.toLowerCase()}`
     ),
     fallback: false,
