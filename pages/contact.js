@@ -1,6 +1,5 @@
 import ContactLayout from "../layouts/ContactLayout.js";
 import styled from "styled-components";
-import Line from "../components/Line.js";
 import { colors } from "../styles/styleVariables.js";
 
 const Contact = () => {
@@ -8,20 +7,17 @@ const Contact = () => {
     <ContactLayout>
       <Wrapper>
         <div className="text-container">
-          <div className="text">
-            <h1>Get In Touch</h1>
-            <p>
-              I’d love to hear about what you’re working on and how I could
-              help. I’m currently looking for a new role and am open to a wide
-              range of opportunities. My preference would be to find a position
-              in a company in London. But I’m also happy to hear about
-              opportunites that don’t fit that description. I’m a hard-working
-              and positive person who will always approach each task with a
-              sense of purpose and attention to detail. Please do feel free to
-              check out my online profiles below and get in touch using the
-              form.
-            </p>
-          </div>
+          <h2>Get In Touch</h2>
+          <p>
+            I’d love to hear about what you’re working on and how I could help.
+            I’m currently looking for a new role and am open to a wide range of
+            opportunities. My preference would be to find a position in a
+            company in London. But I’m also happy to hear about opportunites
+            that don’t fit that description. I’m a hard-working and positive
+            person who will always approach each task with a sense of purpose
+            and attention to detail. Please do feel free to check out my online
+            profiles below and get in touch using the form.
+          </p>
         </div>
         <div className="contact-form-container">
           <h2>Contact Me</h2>
@@ -65,6 +61,14 @@ const Wrapper = styled.div`
 
   .contact-form-container {
     width: 100%;
+    & > *:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .text-container,
+  .contact-form-container {
+    padding-block: 32px;
   }
 
   form {
@@ -82,6 +86,15 @@ const Wrapper = styled.div`
     .button-container {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  @media (min-width: 1140px) {
+    /* desktop */
+    .text-container,
+    .contact-form-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 `;
