@@ -155,6 +155,7 @@ const Wrapper = styled.div`
       grid-row: 1/3;
     }
     .section-container {
+      margin-top: 64px;
       display: grid;
       grid-column-gap: 32px;
       grid-template-columns: 352px 1fr;
