@@ -58,7 +58,13 @@ const Project = ({ project, projects }) => {
           <section className="previews-container">
             <h3>Static Previews</h3>
             {project.images.map((img, i) => (
-              <Image height={800} width={1270} key={i + img} src={img} />
+              <Image
+                height={800}
+                width={1270}
+                key={i + img}
+                src={img}
+                alt={`${project.title} preview image ${i + 1}`}
+              />
             ))}
           </section>
         </section>
