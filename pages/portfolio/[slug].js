@@ -86,6 +86,8 @@ export async function getStaticPaths() {
 
 //styled components
 const Wrapper = styled.div`
+  animation: fadeIn 2000ms ease;
+
   .section-container {
     & > * {
       margin-bottom: 32px;

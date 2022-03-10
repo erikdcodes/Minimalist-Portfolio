@@ -36,6 +36,7 @@ const Wrapper = styled.section`
   row-gap: 32px;
   column-gap: 0;
   margin-bottom: 96px;
+  animation: fadeIn 2000ms ease;
 
   .img-container img {
     height: 100%;

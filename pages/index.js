@@ -39,6 +39,7 @@ const Wrapper = styled.section`
     }
     position: relative;
     margin-bottom: 96px;
+    animation: fadeIn 2000ms ease;
   }
   .title-container {
     button {
