@@ -99,7 +99,6 @@ const Wrapper = styled.div`
   .previews-container,
   .image-container {
     img {
-      height: 100%;
       width: 100%;
       object-fit: cover;
     }
@@ -147,6 +146,23 @@ const Wrapper = styled.div`
 
   @media (min-width: 1140px) {
     /* desktop */
+    .description-container {
+      display: block;
+      & > * {
+        margin-bottom: 32px;
+      }
+      grid-column: 1/2;
+    }
+    .section-container {
+      display: grid;
+      grid-column-gap: 32px;
+      grid-template-columns: 352px 1fr;
+      grid-auto-rows: auto;
+    }
+    .background-container,
+    .previews-container {
+      grid-column: -1;
+    }
   }
 `;
 
