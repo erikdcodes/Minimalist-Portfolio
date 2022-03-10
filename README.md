@@ -1,6 +1,6 @@
-# Frontend Mentor - Minimalist portfolio website solution
+# Minimalist Portfolio - Figma to NextJS / React
 
-This is a solution to the [Minimalist portfolio website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/minimalist-portfolio-website-LMy-ZRyiE). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+Mobile first development of Minimalist Portfolio, designed by [Frontend Mentor](https://www.frontendmentor.io/). Create a responsive, high fidelity live website from a Figma mockup.
 
 ## Table of contents
 
@@ -25,13 +25,11 @@ Screenshot of live website: ![Screenshot](./minimalist-screenshot.jpg)
 
 - Live website URL [Minimalist Portfolio:](https://minimalist-portfolio-erikdcodes.vercel.app/)
 
-## My process
-
-### Built with
+### Technologies
 
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [Styled Components](https://styled-components.com/) - CSS in JS
 - Mobile-first workflow
 - Semantic HTML5 markup
 - CSS custom properties
