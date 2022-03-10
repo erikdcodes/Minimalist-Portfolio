@@ -33,4 +33,5 @@ const Wrapper = styled.div`
   a {
     color: ${colors.veryLightGrey};
   }
+  animation: fadeIn 250ms linear;
 `;
