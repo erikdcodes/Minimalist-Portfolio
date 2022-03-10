@@ -152,12 +152,12 @@ const Wrapper = styled.div`
         margin-bottom: 32px;
       }
       grid-column: 1/2;
+      grid-row: 1/3;
     }
     .section-container {
       display: grid;
       grid-column-gap: 32px;
       grid-template-columns: 352px 1fr;
-      grid-auto-rows: auto;
     }
     .background-container,
     .previews-container {
