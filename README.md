@@ -1,6 +1,6 @@
 # Minimalist Portfolio - Figma to NextJS / React
 
-Mobile first development of Minimalist Portfolio, designed by [Frontend Mentor](https://www.frontendmentor.io/). Created a responsive, high fidelity live website from a Figma mockup.
+Mobile first development of Minimalist Portfolio, designed by [Frontend Mentor](https://www.frontendmentor.io/). Created a responsive, high fidelity live website from a Figma mockup. Developed to be dynamic, ready for real data from an API.
 
 ## Table of contents
 
