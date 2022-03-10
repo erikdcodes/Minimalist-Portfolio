@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../styles/styleVariables.js";
+import Image from "next/image";
 
 const Section = ({
   imgSrc,
@@ -13,7 +14,15 @@ const Section = ({
   return (
     <Wrapper isReversedLayout={isReversedLayout}>
       <div className="img-container">
-        <img src={imgSrc} alt={imgAlt} loading="lazy" />
+        <Image
+          width={1080}
+          height={1000}
+          objectFit="cover"
+          layout="responsive"
+          src={imgSrc}
+          alt={imgAlt}
+          loading="lazy"
+        />
       </div>
 
       <div className="text-container">

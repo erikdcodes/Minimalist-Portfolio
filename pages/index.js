@@ -3,13 +3,20 @@ import DefaultLayout from "../layouts/DefaultLayout";
 import styled from "styled-components";
 import Section from "../components/Section";
 import { colors } from "../styles/styleVariables";
+import Image from "next/image";
 
 // component
 const Home = () => (
   <DefaultLayout>
     <Wrapper>
       <section className="hero-container">
-        <img src="/images/image-homepage-hero@2x.jpg" alt="image of computer" />
+        <Image
+          height={1200}
+          width={2200}
+          layout="responsive"
+          src="/images/image-homepage-hero@2x.jpg"
+          alt="image of computer"
+        />
         <div className="title-container">
           <h2>
             Hi, I&apos;m Alex Spencer and I love building beautiful wesites

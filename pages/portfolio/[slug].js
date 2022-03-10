@@ -5,6 +5,7 @@ import ProjectNav from "../../components/ProjectNav";
 import Head from "next/head";
 import data from "../../fake-data/projects.json";
 const { projects } = data;
+import Image from "next/image";
 
 const Project = ({ project, projects }) => {
   const currentIndex = projects.findIndex(
@@ -23,7 +24,13 @@ const Project = ({ project, projects }) => {
       </Head>
       <Wrapper>
         <div className="image-container">
-          <img src={project.heroImage2} alt={`${project.title} screenshot`} />
+          <Image
+            height={1000}
+            width={2220}
+            layout="responsive"
+            src={project.heroImage2}
+            alt={`${project.title} screenshot`}
+          />
         </div>
         <section className="section-container">
           <section className="description-container">
@@ -51,7 +58,7 @@ const Project = ({ project, projects }) => {
           <section className="previews-container">
             <h3>Static Previews</h3>
             {project.images.map((img, i) => (
-              <img key={i + img} src={img} />
+              <Image height={800} width={1270} key={i + img} src={img} />
             ))}
           </section>
         </section>
